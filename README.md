@@ -1,2 +1,2 @@
-[centry](https://dirkarnez.github.io/centry)
-============================================
+[centry](https://dirkarnez.github.io/centry/examples)
+=====================================================
