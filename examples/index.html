@@ -1,8 +1,22 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button id="btn-make-error">Make an error</button>
+    <script type="module">
+        import { main } from "./app.js";
+        import { centry } from "../centry.js/index.js";
 
-
-    const a= (() => {
-            var err = new Error();
-        return err.stack;
-    })()
-    debugger;
+        centry(() => {
+            document.getElementById("btn-make-error").addEventListener("click", function () {
+                throw new Error("Error A");
+                main();
+            });
+            throw new Error("Error B");
+        })
+    </script>
+</body>
+</html>
